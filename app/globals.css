@@ -9,8 +9,8 @@
   --muted: #77766f;
   --line: #11110f2b;
   --dark-line: #393934;
-  --accent: #c6ff3b;
-  --white: #f2f0e9;
+  --accent: #d7d4ca;
+  --white: #b2ac99;
 }
 
 * {
@@ -32,6 +32,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* =========================================================
+   NOISE
+========================================================= */
 
 .noise {
   position: fixed;
@@ -76,14 +80,17 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  color: white;
+  color: #f2f0e9;
 
-  mix-blend-mode: difference;
+  background: rgba(20, 20, 18, 0.92);
+
+  backdrop-filter: blur(8px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .logo {
   font: 800 18px "Manrope";
-
   letter-spacing: -0.08em;
 }
 
@@ -96,9 +103,9 @@ header nav {
 
   gap: 24px;
 
-  font: 10px "DM Mono";
+  font: 500 12px "DM Mono";
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
 header nav a {
@@ -126,7 +133,7 @@ header nav a:hover::after {
 }
 
 header > small {
-  font: 10px "DM Mono";
+  font: 11px "DM Mono";
 
   letter-spacing: 0.08em;
 }
@@ -157,9 +164,9 @@ header > small {
 
   justify-content: space-between;
 
-  font: 10px "DM Mono";
+  font: 11px "DM Mono";
 
-  letter-spacing: 0.13em;
+  letter-spacing: 0.11em;
 
   color: #aaa;
 }
@@ -260,9 +267,9 @@ header > small {
 
   align-items: end;
 
-  font: 9px "DM Mono";
+  font: 10px "DM Mono";
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
 
   color: white;
 }
@@ -281,15 +288,16 @@ header > small {
 
 .hero label,
 .label {
-  font: 10px "DM Mono";
+  font:
+    500 12px "DM Mono";
 
-  letter-spacing: 0.13em;
+  letter-spacing: 0.11em;
 
   color: var(--muted);
 }
 
 .hero label {
-  color: #8e8d86;
+  color: #aaa;
 }
 
 .hero h1 {
@@ -386,6 +394,13 @@ header > small {
   display: block;
 
   margin-bottom: 70px;
+
+  font:
+    500 12px "DM Mono";
+
+  color: #55544e;
+
+  letter-spacing: 0.11em;
 }
 
 .split {
@@ -472,9 +487,9 @@ header > small {
 
   gap: 10px;
 
-  font: 10px "DM Mono";
+  font: 11px "DM Mono";
 
-  color: var(--muted);
+  color: #66655e;
 }
 
 .threadStageTop span {
@@ -523,7 +538,12 @@ header > small {
 }
 
 .dark .label {
-  color: #85857f;
+  color: #aaa;
+
+  font:
+    500 12px "DM Mono";
+
+  letter-spacing: 0.11em;
 }
 
 .signalsIntro,
@@ -570,7 +590,29 @@ header > small {
 
   line-height: 1.7;
 
-  color: #8f8f88;
+  color: #999;
+}
+
+/* =========================================================
+   04 / ENGINEERING CAPABILITY
+========================================================= */
+
+.skills > .label {
+  font:
+    500 12px "DM Mono";
+
+  color: #aaa;
+
+  letter-spacing: 0.11em;
+}
+
+.skillsIntro h2 {
+  font:
+    700 clamp(58px, 8vw, 120px) /
+    0.82
+    "Manrope";
+
+  letter-spacing: -0.085em;
 }
 
 /* =========================================================
@@ -617,7 +659,8 @@ header > small {
 }
 
 .stats small {
-  font: 10px "DM Mono";
+  font:
+    500 11px "DM Mono";
 
   color: #999;
 }
@@ -702,9 +745,10 @@ header > small {
 
   gap: 14px;
 
-  font: 10px "DM Mono";
+  font:
+    500 11px "DM Mono";
 
-  color: var(--muted);
+  color: #66655e;
 }
 
 .experienceMeta span {
@@ -764,11 +808,12 @@ header > small {
 
   margin-bottom: 10px;
 
-  font: 10px "DM Mono";
+  font:
+    500 11px "DM Mono";
 
   letter-spacing: 0.1em;
 
-  color: var(--muted);
+  color: #66655e;
 }
 
 .learned p {
@@ -796,10 +841,12 @@ header > small {
 
   border: 1px solid var(--line);
 
-  font: 10px "DM Mono";
+  font:
+    500 10px "DM Mono";
 }
+
 /* =========================================================
-   SKILLS
+   SKILLS / TOOLBOX
 ========================================================= */
 
 .skills {
@@ -848,8 +895,6 @@ header > small {
   cursor: default;
 }
 
-/* subtle playing-card feel */
-
 .skillGroup:nth-child(1) {
   transform: rotate(-2deg);
 }
@@ -888,9 +933,10 @@ header > small {
 
   margin-bottom: 45px;
 
-  font: 10px "DM Mono";
+  font:
+    500 11px "DM Mono";
 
-  color: #777;
+  color: #999;
 }
 
 .skillGroup h3 {
@@ -908,11 +954,11 @@ header > small {
 
   margin: 12px 0 25px;
 
-  color: #777;
+  color: #888;
 
   line-height: 1.5;
 
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .skillList {
@@ -932,7 +978,8 @@ header > small {
 
   color: #aaa;
 
-  font: 9px "DM Mono";
+  font:
+    500 10px "DM Mono";
 
   transition:
     color 0.25s ease,
@@ -975,54 +1022,21 @@ header > small {
   }
 }
 
-@media (max-width: 700px) {
-  .skillsGrid {
-    grid-template-columns: 1fr;
-
-    overflow: visible;
-
-    padding: 10px 5px 30px;
-
-    margin-left: 0;
-
-    margin-right: 0;
-
-    gap: 12px;
-
-    border-left: 0;
-  }
-
-  .skillGroup {
-    min-width: 0;
-
-    min-height: 320px;
-
-    padding: 28px;
-  }
-
-  .skillGroup:nth-child(1),
-  .skillGroup:nth-child(2),
-  .skillGroup:nth-child(3),
-  .skillGroup:nth-child(4),
-  .skillGroup:nth-child(5) {
-    transform: rotate(0deg);
-  }
-
-  .skillGroup:hover {
-    transform: translateY(-8px);
-  }
-
-  .skillNumber {
-    margin-bottom: 40px;
-  }
-}
 /* =========================================================
-   SELECTED WORK
-   HORIZONTAL CARDS
+   05 / SELECTED WORK
 ========================================================= */
 
 .work {
   background: var(--paper-deep);
+}
+
+.work > .label {
+  font:
+    500 12px "DM Mono";
+
+  color: #55544e;
+
+  letter-spacing: 0.11em;
 }
 
 .projects {
@@ -1081,17 +1095,19 @@ header > small {
 }
 
 .projectTop small {
-  font: 10px "DM Mono";
+  font:
+    500 11px "DM Mono";
 
-  color: var(--muted);
+  color: #55544e;
 }
 
 .projectTop span {
-  font: 9px "DM Mono";
+  font:
+    500 11px "DM Mono";
 
   letter-spacing: 0.08em;
 
-  color: var(--muted);
+  color: #66655e;
 
   text-align: right;
 }
@@ -1140,9 +1156,10 @@ header > small {
 
   border: 1px solid var(--line);
 
-  font: 9px "DM Mono";
+  font:
+    500 10px "DM Mono";
 
-  color: var(--muted);
+  color: #66655e;
 }
 
 .projectLink {
@@ -1154,7 +1171,8 @@ header > small {
 
   border-bottom: 1px solid var(--ink);
 
-  font: 10px "DM Mono";
+  font:
+    500 11px "DM Mono";
 
   letter-spacing: 0.06em;
 
@@ -1162,13 +1180,22 @@ header > small {
 }
 
 /* =========================================================
-   LAB
+   06 / LAB
 ========================================================= */
 
 .labSection {
   padding-top: 160px;
 
   padding-bottom: 160px;
+}
+
+.labSection > .label {
+  font:
+    500 12px "DM Mono";
+
+  color: #aaa;
+
+  letter-spacing: 0.11em;
 }
 
 .githubProfile {
@@ -1180,7 +1207,8 @@ header > small {
 
   border-bottom: 1px solid #aaa;
 
-  font: 10px "DM Mono";
+  font:
+    500 11px "DM Mono";
 
   letter-spacing: 0.08em;
 
@@ -1216,13 +1244,14 @@ header > small {
 .labItem > span,
 .labItem > em,
 .labMeta small {
-  font: 10px "DM Mono";
+  font:
+    500 11px "DM Mono";
 }
 
 .labItem > small,
 .labItem > span,
 .labMeta small {
-  color: #777;
+  color: #888;
 }
 
 .labItem > em {
@@ -1246,11 +1275,11 @@ header > small {
 
   margin: 8px 0 0;
 
-  color: #777;
+  color: #888;
 
   line-height: 1.5;
 
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .labMeta {
@@ -1270,13 +1299,22 @@ header > small {
 }
 
 /* =========================================================
-   CAREER
+   07 / CAREER
 ========================================================= */
 
 .careerSection {
   padding-top: 160px;
 
   padding-bottom: 160px;
+}
+
+.careerSection > .label {
+  font:
+    500 12px "DM Mono";
+
+  color: #55544e;
+
+  letter-spacing: 0.11em;
 }
 
 .career {
@@ -1325,13 +1363,15 @@ header > small {
 }
 
 .career article > small {
-  font: 10px "DM Mono";
+  font:
+    500 11px "DM Mono";
 
-  color: var(--muted);
+  color: #66655e;
 }
 
 .career article b {
-  font: 600 20px "Manrope";
+  font:
+    600 20px "Manrope";
 }
 
 .career article p {
@@ -1342,14 +1382,29 @@ header > small {
   color: #666;
 
   line-height: 1.6;
+
+  font-size: 15px;
 }
 
 /* =========================================================
-   HOW I THINK
+   08 / HOW I THINK
 ========================================================= */
 
 .principles {
-  background: #cbc8bd;
+  background: var(--dark);
+
+  color: #f2f0e9;
+
+  border-top-color: var(--dark-line);
+}
+
+.principles .label {
+  color: #aaa;
+
+  font:
+    500 12px "DM Mono";
+
+  letter-spacing: 0.11em;
 }
 
 .principlesLayout {
@@ -1366,10 +1421,8 @@ header > small {
   align-items: start;
 }
 
-/* LEFT */
-
 .principlesList {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--dark-line);
 }
 
 .principleRow {
@@ -1383,15 +1436,16 @@ header > small {
 
   padding: 19px 0;
 
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--dark-line);
 }
 
 .principleRow > small {
   padding-top: 3px;
 
-  font: 9px "DM Mono";
+  font:
+    500 11px "DM Mono";
 
-  color: var(--muted);
+  color: #888;
 }
 
 .principleRow b {
@@ -1403,6 +1457,8 @@ header > small {
     "Manrope";
 
   letter-spacing: -0.02em;
+
+  color: #f2f0e9;
 }
 
 .principleRow p {
@@ -1410,14 +1466,12 @@ header > small {
 
   margin: 6px 0 0;
 
-  font-size: 11px;
+  font-size: 12px;
 
   line-height: 1.55;
 
-  color: #66645d;
+  color: #999;
 }
-
-/* QUOTE — BOTTOM LEFT */
 
 .compactQuote {
   max-width: 600px;
@@ -1426,7 +1480,9 @@ header > small {
 
   padding-left: 20px;
 
-  border-left: 2px solid var(--ink);
+  border-left: 2px solid #f2f0e9;
+
+  color: #f2f0e9;
 
   font:
     italic 400
@@ -1435,8 +1491,6 @@ header > small {
     Georgia,
     serif;
 }
-
-/* RIGHT */
 
 .principlesHeading {
   position: sticky;
@@ -1453,6 +1507,8 @@ header > small {
     "Manrope";
 
   letter-spacing: -0.075em;
+
+  color: #f2f0e9;
 }
 
 .principlesHeading h2 em {
@@ -1466,21 +1522,30 @@ header > small {
 
   margin: 30px 0 0;
 
-  font-size: 11px;
+  font-size: 12px;
 
   line-height: 1.6;
 
-  color: #66645d;
+  color: #999;
 }
 
 /* =========================================================
-   CREDENTIALS
+   09 / CREDENTIALS
 ========================================================= */
 
 .credentials {
   padding-top: 130px;
 
   padding-bottom: 130px;
+}
+
+.credentials > .label {
+  font:
+    500 12px "DM Mono";
+
+  color: #55544e;
+
+  letter-spacing: 0.11em;
 }
 
 .creds {
@@ -1512,9 +1577,10 @@ header > small {
 
 .creds > div > small,
 .creds > div > span {
-  font: 10px "DM Mono";
+  font:
+    500 11px "DM Mono";
 
-  color: var(--muted);
+  color: #66655e;
 }
 
 .creds b {
@@ -1527,20 +1593,29 @@ header > small {
 }
 
 /* =========================================================
-   CONTACT
+   10 / CONTACT
 ========================================================= */
 
 .contact {
-  background: var(--accent);
+  background: var(--dark);
+
+  color: #f2f0e9;
 
   padding:
-    100px
+    160px
     7vw
     130px;
+
+  border-top: 1px solid var(--dark-line);
 }
 
 .contact .label {
-  color: #343b20;
+  color: #aaa;
+
+  font:
+    500 12px "DM Mono";
+
+  letter-spacing: 0.11em;
 }
 
 .contactLayout {
@@ -1554,7 +1629,7 @@ header > small {
 
   align-items: end;
 
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .contactHeading h2 {
@@ -1566,6 +1641,8 @@ header > small {
     "Manrope";
 
   letter-spacing: -0.1em;
+
+  color: #f2f0e9;
 }
 
 .contactHeading h2 em {
@@ -1575,7 +1652,7 @@ header > small {
 }
 
 .contactDetails {
-  border-top: 1px solid #111;
+  border-top: 1px solid var(--dark-line);
 }
 
 .contactItem {
@@ -1589,7 +1666,7 @@ header > small {
 
   padding: 22px 0;
 
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid var(--dark-line);
 
   transition:
     padding-left 0.3s ease;
@@ -1600,11 +1677,12 @@ header > small {
 }
 
 .contactItem small {
-  font: 9px "DM Mono";
+  font:
+    500 11px "DM Mono";
 
   letter-spacing: 0.08em;
 
-  color: #343b20;
+  color: #999;
 }
 
 .contactItem span {
@@ -1613,16 +1691,22 @@ header > small {
     "DM Mono";
 
   text-align: right;
+
+  color: #f2f0e9;
 }
 
 /* =========================================================
    FOOTER
 ========================================================= */
+/* =========================================================
+   FOOTER
+   LIGHT BACKGROUND BELOW CONTACT
+========================================================= */
 
 footer {
-  background: var(--dark);
+  background: var(--paper-deep);
 
-  color: white;
+  color: var(--ink);
 
   padding:
     70px
@@ -1638,23 +1722,30 @@ footer {
 
   gap: 40px;
 
-  font: 11px "DM Mono";
+  border-top: 1px solid var(--line);
+
+  font:
+    500 12px "DM Mono";
 }
 
 footer b {
   font:
     700 22px
     "Manrope";
+
+  color: var(--ink);
 }
 
 footer span {
   display: block;
 
-  color: #777;
+  color: #66655e;
 
   margin-top: 12px;
 
   line-height: 1.5;
+
+  font-size: 12px;
 }
 
 .footerNav {
@@ -1669,12 +1760,14 @@ footer span {
 
 .footerNav a,
 .social a {
-  color: #aaa;
+  color: #55544e;
+
+  transition: color 0.25s ease;
 }
 
 .footerNav a:hover,
 .social a:hover {
-  color: white;
+  color: var(--ink);
 }
 
 .social {
@@ -1688,7 +1781,7 @@ footer span {
 .social span {
   margin: 0;
 
-  color: #555;
+  color: #888;
 }
 
 /* =========================================================
@@ -1698,6 +1791,8 @@ footer span {
 @media (max-width: 1100px) {
   header nav {
     gap: 15px;
+
+    font-size: 11px;
   }
 
   header > small {
@@ -1836,15 +1931,54 @@ footer span {
       1fr;
   }
 }
-
 /* =========================================================
    MOBILE
 ========================================================= */
 
 @media (max-width: 700px) {
+
+  /* NAV */
+
+  header {
+    padding: 18px 5vw;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  header nav {
+    gap: 14px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.03em;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+
+    scrollbar-width: none;
+  }
+
+  header nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  header > small {
+    display: none;
+  }
+
+
+  /* =======================================================
+     HERO
+  ======================================================= */
+
   .kicker,
   .heroFoot {
-    font-size: 8px;
+    font-size: 10px;
+
+    line-height: 1.5;
   }
 
   .kicker span:last-child,
@@ -1888,6 +2022,10 @@ footer span {
     aspect-ratio: 0.8;
   }
 
+  .photoCaption {
+    font-size: 10px;
+  }
+
   .hero h1 {
     font-size:
       clamp(
@@ -1895,6 +2033,11 @@ footer span {
         18vw,
         100px
       );
+  }
+
+  .hero label,
+  .label {
+    font-size: 11px;
   }
 
   .heroStatement {
@@ -1912,6 +2055,11 @@ footer span {
       );
   }
 
+
+  /* =======================================================
+     GLOBAL
+  ======================================================= */
+
   .section {
     padding:
       90px
@@ -1920,7 +2068,56 @@ footer span {
 
   .section > .label {
     margin-bottom: 50px;
+
+    font-size: 12px;
+
+    font-weight: 500;
   }
+
+  /*
+     IMPORTANT:
+     Section intros such as SELECTED WORK / LAB
+     become one column on mobile.
+  */
+
+  .split {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    align-items: start;
+  }
+
+  .split h2 {
+    font-size:
+      clamp(
+        48px,
+        15vw,
+        72px
+      );
+
+    line-height: 0.9;
+  }
+
+  .split > p,
+  .split > div > p {
+    max-width: 100%;
+
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #5d5c56;
+  }
+
+
+  /* =======================================================
+     THREAD
+  ======================================================= */
 
   .threadStages {
     grid-template-columns:
@@ -1932,6 +2129,15 @@ footer span {
     min-height: 165px;
   }
 
+  .threadStageTop {
+    font-size: 11px;
+  }
+
+
+  /* =======================================================
+     SIGNALS
+  ======================================================= */
+
   .signalsIntro h2,
   .skillsIntro h2 {
     font-size:
@@ -1941,6 +2147,15 @@ footer span {
         95px
       );
   }
+
+  .stats small {
+    font-size: 11px;
+  }
+
+
+  /* =======================================================
+     EXPERIENCE
+  ======================================================= */
 
   .experience {
     padding-top: 100px;
@@ -1968,6 +2183,10 @@ footer span {
       55px;
   }
 
+  .experienceMeta {
+    font-size: 11px;
+  }
+
   .experienceBody h3 {
     font-size:
       clamp(
@@ -1982,27 +2201,88 @@ footer span {
     font-size: 15px;
   }
 
+
+  /* =======================================================
+     TOOLBOX
+  ======================================================= */
+
   .skills {
     padding-top: 100px;
 
     padding-bottom: 100px;
   }
 
+  .skills > .label {
+    font-size: 12px;
+
+    font-weight: 500;
+  }
+
   .skillsGrid {
     grid-template-columns: 1fr;
+
+    overflow: visible;
+
+    padding:
+      10px
+      5px
+      30px;
+
+    margin-left: 0;
+
+    margin-right: 0;
+
+    gap: 12px;
+
+    border-left: 0;
   }
 
   .skillGroup {
-    min-height: auto;
+    min-width: 0;
+
+    min-height: 320px;
 
     padding: 28px;
   }
 
-  .skillNumber {
-    margin-bottom: 45px;
+  .skillGroup:nth-child(1),
+  .skillGroup:nth-child(2),
+  .skillGroup:nth-child(3),
+  .skillGroup:nth-child(4),
+  .skillGroup:nth-child(5) {
+    transform: rotate(0deg);
   }
 
-  /* SELECTED WORK */
+  .skillGroup:hover {
+    transform: translateY(-8px);
+  }
+
+  .skillNumber {
+    margin-bottom: 40px;
+
+    font-size: 11px;
+  }
+
+  .skillGroup > p {
+    font-size: 13px;
+  }
+
+  .skillList span {
+    font-size: 10px;
+  }
+
+
+  /* =======================================================
+     SELECTED WORK
+  ======================================================= */
+
+  .work > .label {
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #55544e;
+  }
 
   .projects {
     grid-template-columns: 1fr;
@@ -2024,6 +2304,18 @@ footer span {
     border-bottom: 0;
   }
 
+  .projectTop small {
+    font-size: 11px;
+
+    font-weight: 500;
+  }
+
+  .projectTop span {
+    font-size: 10px;
+
+    font-weight: 500;
+  }
+
   .projectMain {
     padding-top: 70px;
   }
@@ -2032,7 +2324,38 @@ footer span {
     font-size: 34px;
   }
 
-  /* LAB */
+  .projectMain p {
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+
+  .projectTags span {
+    font-size: 10px;
+  }
+
+  .projectLink {
+    font-size: 11px;
+  }
+
+
+  /* =======================================================
+     LAB
+  ======================================================= */
+
+  .labSection {
+    padding-top: 100px;
+
+    padding-bottom: 100px;
+  }
+
+  .labSection > .label {
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #aaa;
+  }
 
   .lab {
     margin-top: 70px;
@@ -2058,10 +2381,19 @@ footer span {
   }
 
   .labName b {
-    font-size: 20px;
+    font-size: 21px;
   }
 
-  /* CAREER */
+  .labName p {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+
+  /* =======================================================
+     CAREER
+  ======================================================= */
 
   .career {
     grid-template-columns: 1fr;
@@ -2078,7 +2410,46 @@ footer span {
       );
   }
 
-  /* HOW I THINK */
+  .careerSection > .label {
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #55544e;
+  }
+
+  .career article > small {
+    font-size: 11px;
+  }
+
+  .career article b {
+    font-size: 19px;
+  }
+
+  .career article p {
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+
+
+  /* =======================================================
+     HOW I THINK
+  ======================================================= */
+
+  .principles {
+    background: var(--dark);
+
+    color: #f2f0e9;
+  }
+
+  .principles .label {
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #aaa;
+  }
 
   .principlesLayout {
     grid-template-columns: 1fr;
@@ -2103,6 +2474,10 @@ footer span {
 
   .principlesHeading p {
     margin-top: 22px;
+
+    font-size: 12px;
+
+    color: #999;
   }
 
   .principleRow {
@@ -2113,71 +2488,180 @@ footer span {
     gap: 14px;
 
     padding: 16px 0;
+
+    border-bottom-color: var(--dark-line);
+  }
+
+  .principleRow > small {
+    font-size: 11px;
   }
 
   .principleRow b {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .principleRow p {
-    font-size: 10px;
+    font-size: 11px;
+
+    color: #999;
   }
 
   .compactQuote {
     margin-top: 45px;
 
     font-size: 30px;
+
+    color: #f2f0e9;
   }
 
-  /* CONTACT */
 
-  .contact {
-    padding:
-      80px
-      6vw
-      100px;
+  /* =======================================================
+     CREDENTIALS
+  ======================================================= */
+
+  .credentials {
+    padding-top: 100px;
+
+    padding-bottom: 100px;
   }
 
-  .contactLayout {
-    grid-template-columns: 1fr;
-
-    gap: 60px;
-
-    margin-top: 55px;
-  }
-
-  .contactHeading h2 {
-    font-size:
-      clamp(
-        62px,
-        17vw,
-        115px
-      );
-  }
-
-  .contactItem {
-    align-items: flex-start;
-
-    flex-direction: column;
-
-    gap: 8px;
-  }
-
-  .contactItem span {
-    text-align: left;
-
+  .credentials > .label {
     font-size: 12px;
+
+    font-weight: 500;
+
+    color: #55544e;
   }
 
-  /* FOOTER */
+  .creds {
+    grid-template-columns: 1fr;
+  }
+
+  .creds > div > small,
+  .creds > div > span {
+    font-size: 11px;
+  }
+
+  .creds b {
+    font-size: 21px;
+  }
+/* =======================================================
+   CONTACT — MOBILE
+======================================================= */
+
+.contact {
+  background: var(--dark);
+
+  color: #f2f0e9;
+
+  padding:
+    125px
+    6vw
+    100px;
+
+  border-top: 1px solid var(--dark-line);
+}
+
+.contact .label {
+  color: #aaa;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+.contactLayout {
+  grid-template-columns: 1fr;
+
+  gap: 60px;
+
+  margin-top: 55px;
+}
+
+.contactHeading h2 {
+  font-size:
+    clamp(
+      62px,
+      17vw,
+      115px
+    );
+
+  color: #f2f0e9;
+}
+
+.contactHeading h2 em {
+  color: #f2f0e9;
+}
+
+.contactDetails {
+  border-top-color: var(--dark-line);
+}
+
+.contactItem {
+  align-items: flex-start;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  border-bottom-color: var(--dark-line);
+}
+
+.contactItem small {
+  font-size: 11px;
+
+  color: #999;
+}
+
+.contactItem span {
+  text-align: left;
+
+  font-size: 13px;
+
+  color: #f2f0e9;
+}
+  /* =======================================================
+     FOOTER
+     LIGHT / SLIGHTLY DARKER PAPER
+  ======================================================= */
 
   footer {
     grid-template-columns: 1fr;
+
+    background: var(--paper-deep);
+
+    color: var(--ink);
 
     padding:
       55px
       6vw
       35px;
+
+    font-size: 12px;
+
+    border-top: 1px solid var(--line);
+  }
+
+  footer b {
+    color: var(--ink);
+  }
+
+  footer span {
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: #66655e;
+  }
+
+  .footerNav a,
+  .social a {
+    color: #55544e;
+  }
+
+  .footerNav a:hover,
+  .social a:hover {
+    color: var(--ink);
   }
 
   .social {
